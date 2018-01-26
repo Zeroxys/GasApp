@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+
+import Buttons from '../../components/Buttons/Button'
 
 const styles = StyleSheet.create({
   container: {
@@ -24,15 +26,7 @@ class LoginComponent extends Component {
   }
 
   submit = () =>  {
-    if(this.state.text.trim() === '') {
-      return 'empty'
-    }
-
-    this.setState(prevState => {
-      return {
-        box : prevState.box.concat(prevState.text)
-      }
-    })
+    alert('asd')
   }
 
   changeText = (char) => {
@@ -46,7 +40,15 @@ class LoginComponent extends Component {
     return (
       <View style={styles.container}>
 
-        <Text>lool</Text>
+        <Buttons
+          title ='Ingresa' 
+          color = '#3b5998' 
+          evento={(e) => this.submit(e)}/>
+
+        <Buttons
+          title ='Registrate' 
+          color = '#EE6E73' 
+          evento={(e) => this.submit(e)}/>
 
       </View>
     );
