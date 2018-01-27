@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
-import Buttons from '../../components/Buttons/Button'
+import Login from '../../components/Login/Login'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   }
@@ -39,17 +38,8 @@ class LoginComponent extends Component {
 
     return (
       <View style={styles.container}>
-
-        <Buttons
-          title ='Ingresa' 
-          color = '#3b5998' 
-          evento={(e) => this.submit(e)}/>
-
-        <Buttons
-          title ='Registrate' 
-          color = '#EE6E73' 
-          evento={(e) => this.submit(e)}/>
-
+        <Login
+          evento={(e) => this.submit()}/>
       </View>
     );
   }

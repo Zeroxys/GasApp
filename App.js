@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import LoginComponent from './src/components/Login/LoginComponent'
+import LoginComponent from './src/containers/Login/LoginComponent'
 
 const styles = StyleSheet.create({
   container: {
