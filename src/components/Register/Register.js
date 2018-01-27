@@ -1,7 +1,6 @@
 import React from 'react'
-import {View, Text, TextInput, StyleSheet} from 'react-native'
+import {View, Text, TextInput, StyleSheet, Button} from 'react-native'
 
-import Buttons from '../Buttons/Button'
 
 const styles = StyleSheet.create({
   content : {
@@ -12,26 +11,33 @@ const styles = StyleSheet.create({
   },
 
   container : {
-    flex:1,
-    flexDirection:'column',
-    width: '90%',
+    minHeight : '100%',
+    width: '85%',
   },
 
   form : {
-
+    backgroundColor: 'white',
+    marginBottom : 30
   },
 
   input : {
-    backgroundColor : 'white'
   },
+
+  information : {
+    textAlign: 'center',
+    marginTop: 30,
+    marginBottom : 30
+  }
 })
 
 const Register = (props) => {
   return (
     <View style={styles.content}>
-
+   
       <View style={styles.container}>
-        <Text>lasdasdsadsadzxcxzcxzcassdasdqwezc</Text>
+        <Text style={styles.information}>
+          Velit culpa ex id incididunt fugiat irure velit laborum consequat elit.
+        </Text>
 
         <View>
           <View style={styles.form}>
@@ -39,17 +45,19 @@ const Register = (props) => {
               placeholder="Nombre Completo"
               style={styles.input}/>
             <TextInput placeholder="Email"
-              style={styles.input}/>
+              style={styles.inputheyitspriscilaheyitspriscilaheyitspriscilaheyitspriscila}/>
             <TextInput placeholder="Usuario"
               style={styles.input}/>
-            <TextInput placeholder="Contraseña"
-              style={styles.input}/>
+            <TextInput 
+              placeholder="Contraseña"
+              style={styles.input}
+              secureTextEntry={true}/>
           </View>
 
-          <Buttons
+          <Button
             title ='Registrar' 
             color = '#3b5998' 
-            evento={props.evento}/>
+            onPress={props.evento}/>
         </View>  
       </View>
     </View>

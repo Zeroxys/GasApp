@@ -1,7 +1,6 @@
 import React from 'react'
-import {View, Text, StyleSheet, TextInput} from 'react-native'
+import {View, Text, StyleSheet, TextInput, Button} from 'react-native'
 
-import Buttons from '../Buttons/Button'
 import Register from '../Register/Register'
 
 const styles = {
@@ -17,12 +16,12 @@ const Login = (props) => {
   /*return (
     <View style={styles.content}>
 
-      <Buttons
+      <Button
         title ='Ingresa' 
         color = '#3b5998' 
         evento={props.evento}/>
 
-      <Buttons
+      <Button
         title ='Registrate' 
         color = '#EE6E73' 
         evento={props.evento}/>
