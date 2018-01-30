@@ -5,6 +5,7 @@ import {Router, Scene, Stack, Actions} from 'react-native-router-flux'
 import Login from '../../components/Login/Login'
 import Register from '../../components/Register/Register'
 import Signup from '../../components/Signup/Signup'
+import Dashboard from '../../components/dashboard/dashboard'
 
 const styles = StyleSheet.create({
   bar : {
@@ -41,6 +42,7 @@ class LoginComponent extends Component {
           <Scene key="login" component={Login} hideNavBar={true}/>
           <Scene key="register" component={Register} titleStyle={styles.bar} title="REGISTRATE"/>
           <Scene key="signup" component={Signup} title="INGRESAR"/>
+          <Scene key="dashboard" component={Dashboard} hideNavBar={true}/>
         </Stack>
       </Router>
     );

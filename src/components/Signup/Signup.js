@@ -1,5 +1,6 @@
 import React from 'react'
 import {View, Text, StyleSheet, TextInput, Button} from 'react-native'
+import { Actions } from 'react-native-router-flux';
 
 const styles = StyleSheet.create({
   content : {
@@ -50,8 +51,8 @@ const Signup = (props) => {
           <Button
             title ='Entrar' 
             color = '#3b5998' 
-            onPress={props.evento}/>
-        </View>  
+            onPress={Actions.dashboard}/>
+        </View>
       </View>
     </View>
   )

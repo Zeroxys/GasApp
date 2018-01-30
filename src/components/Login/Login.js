@@ -27,15 +27,15 @@ const Login = (props) => {
       <View style={styles.container}>
         <TouchableOpacity>
           <Button
-            title ='Ingresa' 
+            title ='Ingresar' 
             color = '#3b5998' 
             onPress={Actions.signup}/>
         </TouchableOpacity>
 
         <TouchableOpacity>
           <Button
-            title ='Registrate' 
-            color = '#EE6E73' 
+            title ='Registrar' 
+            color = '#5A8DFE' 
             onPress={Actions.register}/>
         </TouchableOpacity>
       </View>
