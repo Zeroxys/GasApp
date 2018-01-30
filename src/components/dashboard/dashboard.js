@@ -24,20 +24,52 @@ class Dashboard extends Component {
     super()
     this.state = {
       currentLocation : {
-        latitude : 37.7900352,
-        longitude : -122.4013723,
+        latitude : 17.989456,
+        longitude : -92.947506,
         latitudeDelta : 0.0122,
         longitudeDelta : width / height * 0.0122
-      }
+      },
+      marker : false
     }
+
+    this.locationHandler = this.locationHandler.bind(this)
+  }
+
+  locationHandler = event => {
+    let coords = event.nativeEvent.coordinate
+
+    this.setState(prevState => {
+      return {
+        currentLocation : {
+          ...prevState.currentLocation,
+          latitude : coords.latitude,
+          longitude : coords.longitude
+        },
+        marker : true
+      }
+    })
+    console.warn(event.nativeEvent.coordinate)
   }
 
   render () {
+
+    let marker = null
+
+    if(this.state.marker) {
+      marker = <MapView.Marker coordinate={this.state.currentLocation}/>
+    }
+
     return( 
     <View style={styles.content}>
 
       <View style={styles.mapContent}>
-        <MapView style={styles.map} initialRegion={this.state.currentLocation}/>
+        <MapView 
+          style={styles.map} 
+          initialRegion={this.state.currentLocation}
+          region = {this.state.currentLocation}
+          onPress={this.locationHandler}>
+          {marker}
+        </MapView>
       </View>
 
       <View>
