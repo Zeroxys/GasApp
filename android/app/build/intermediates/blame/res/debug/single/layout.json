@@ -1,15 +1,15 @@
 [
     {
-        "merged": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-        "source": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_screen_content_include.xml"
-    },
-    {
         "merged": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
         "source": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/select_dialog_item_material.xml"
     },
     {
         "merged": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
         "source": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
@@ -40,12 +40,12 @@
         "source": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/notification_template_big_media.xml"
     },
     {
-        "merged": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/res/merged/debug/layout/redbox_view.xml",
-        "source": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/res/layout/redbox_view.xml"
-    },
-    {
         "merged": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
         "source": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/res/merged/debug/layout/redbox_view.xml",
+        "source": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/res/layout/redbox_view.xml"
     },
     {
         "merged": "/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
