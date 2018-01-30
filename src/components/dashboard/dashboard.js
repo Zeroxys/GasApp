@@ -38,6 +38,12 @@ class Dashboard extends Component {
   locationHandler = event => {
     let coords = event.nativeEvent.coordinate
 
+    this.map.animateToRegion({
+      ...this.state.currentLocation,
+      latitude :  coords.latitude,
+      longitude : coords.longitude
+    })
+
     this.setState(prevState => {
       return {
         currentLocation : {
@@ -66,8 +72,8 @@ class Dashboard extends Component {
         <MapView 
           style={styles.map} 
           initialRegion={this.state.currentLocation}
-          region = {this.state.currentLocation}
-          onPress={this.locationHandler}>
+          onPress={this.locationHandler}
+          ref = {ref => this.map = ref}>
           {marker}
         </MapView>
       </View>
