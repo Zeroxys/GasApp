@@ -2,19 +2,31 @@ import React, {Component} from 'react'
 import {View, Text, StyleSheet, Dimensions, Button} from 'react-native'
 import MapView from 'react-native-maps'
 
+import InfoContent from './infoContent/info'
+
 const {width, height} = Dimensions.get('window')
 
 const styles = StyleSheet.create({
   content : {
-  },
-
-  mapContent : {
-    width : '100%',
+    flex : 1,
+    width: width,
+    height : height,
+    borderWidth : 4,
+    borderColor : 'red'
   },
 
   map : {
     width : width,
     height : height / 2
+  },
+  
+  infoContainers : {
+    flexDirection : 'column', 
+    justifyContent :'space-around',
+    alignItems: 'center',
+    height : 200,
+    borderWidth : 1,
+    borderColor : 'green'
   }
 })
 
@@ -34,6 +46,11 @@ class Dashboard extends Component {
 
     this.locationHandler = this.locationHandler.bind(this)
     this.getCurrentPosition = this.getCurrentPosition.bind(this)
+    this.showOptions = this.showOptions.bind(this)
+  }
+
+  showOptions = (e) => {
+    alert(e)
   }
 
   getCurrentPosition = (event) => {
@@ -89,7 +106,7 @@ class Dashboard extends Component {
     return( 
     <View style={styles.content}>
 
-      <View style={styles.mapContent}>
+      <View>
         <MapView 
           style={styles.map} 
           initialRegion={this.state.currentLocation}
@@ -101,7 +118,12 @@ class Dashboard extends Component {
 
       <View>
         <Button title={"Posicion actual"} onPress={this.getCurrentPosition}/>
-        <Text>Aqui va lo demas xD</Text>
+        <View style={styles.infoContainers}>
+          <InfoContent 
+            showOptions = {e => this.showOptions(e)}/>
+          <InfoContent
+            showOptions = {e => this.showOptions(e)}/>
+        </View>
       </View>
 
     </View>
