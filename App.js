@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import LoginComponent from './src/containers/Login/LoginComponent'
+import Home from './src/components/Home/Home'
 
 const styles = StyleSheet.create({
   container: {
@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <LoginComponent/>
+      <Home/>
     </View>
   )
 }

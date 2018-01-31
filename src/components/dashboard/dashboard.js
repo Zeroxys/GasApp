@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet, Dimensions} from 'react-native'
+import {View, Text, StyleSheet, Dimensions, Button} from 'react-native'
 import MapView from 'react-native-maps'
 
 const {width, height} = Dimensions.get('window')
@@ -33,6 +33,27 @@ class Dashboard extends Component {
     }
 
     this.locationHandler = this.locationHandler.bind(this)
+    this.getCurrentPosition = this.getCurrentPosition.bind(this)
+  }
+
+  getCurrentPosition = (event) => {
+    navigator.geolocation.getCurrentPosition( pos => {
+      
+      const coordsEvent = {
+        nativeEvent : {
+          coordinate : {
+            latitude : pos.coords.latitude,
+            longitude :  pos.coords.longitude
+          }
+        }
+      }
+      
+      this.locationHandler(coordsEvent)
+
+      console.warn(pos.coords)
+    }, error_handler => {
+      if(error_handler) alert('get current position failed')
+    })
   }
 
   locationHandler = event => {
@@ -79,6 +100,7 @@ class Dashboard extends Component {
       </View>
 
       <View>
+        <Button title={"Posicion actual"} onPress={this.getCurrentPosition}/>
         <Text>Aqui va lo demas xD</Text>
       </View>
 
