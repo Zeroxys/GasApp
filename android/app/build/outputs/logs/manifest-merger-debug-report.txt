@@ -32,6 +32,7 @@ ADDED from /home/zeroxys/Dev/Mobile/Gas/android/app/src/main/AndroidManifest.xml
 		ADDED from /home/zeroxys/Dev/Mobile/Gas/android/app/src/main/AndroidManifest.xml:8:22-76
 uses-sdk
 ADDED from /home/zeroxys/Dev/Mobile/Gas/android/app/src/main/AndroidManifest.xml:10:5-12:41
+MERGED from [Gas:react-native-vector-icons:unspecified] /home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/Gas/react-native-vector-icons/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.50.3] /home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/AndroidManifest.xml:14:5-16:41

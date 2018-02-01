@@ -3,24 +3,6 @@
 
     <item
         is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="24303e5ddb2c1210dd7e8db9dbab018f50313e48">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.50.3_b28e15f0f30e9fb4b0ef2c6119c71d312faa091a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_180b5bc30afa28b5448554a67b7a5d8d2f624a26.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -39,48 +21,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_6aa805b9b79b0b479764131b07588d802e1c0f43.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
         <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_ec0553dc23fd1021f2e50ccc9bc109f1d67a58df.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_19acf5c4339e234219d61fba4cc5d13e895497d8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_dfaf662ff1c1e2deb3a530c490272927ed9e542e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_6a72ce6315f244ae3aa40ee14054c48e7e851512.jar" />
     </item>
     <item
         is-multidex="false"
@@ -102,6 +48,168 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_6a72ce6315f244ae3aa40ee14054c48e7e851512.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/Gas/react-native-maps/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="dfb98646df167fd612426d54754b5eb9bbf3096b">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/Gas-react-native-maps-unspecified_0752e0dad9366d8498afa59831625195a6012265.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_7fe7e7f72d1f451d90744c84e89194fcdfcd3ce6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="24303e5ddb2c1210dd7e8db9dbab018f50313e48">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.50.3_b28e15f0f30e9fb4b0ef2c6119c71d312faa091a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.0.1_258ffa45061894f5d1fdb72c24c854d43a483177.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_4ee3b74747a9ab2f460a9cb0359226fff693c337.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_f9042a6c3f1f6a416210ddbd672ad01c69175c95.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_52fb76ce6eb53d90c24757e92315db6d8527103f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_c4c6ea5ec838a8bc766735c81b95acbd86cc0c2d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_19acf5c4339e234219d61fba4cc5d13e895497d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.0.1_732f8bd59fee1a273c1e6d9f8e0ac0ffd019a110.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="24303e5ddb2c1210dd7e8db9dbab018f50313e48">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.50.3_b28e15f0f30e9fb4b0ef2c6119c71d312faa091a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_180b5bc30afa28b5448554a67b7a5d8d2f624a26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_6aa805b9b79b0b479764131b07588d802e1c0f43.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_19acf5c4339e234219d61fba4cc5d13e895497d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/Gas/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5e4d7f180cb711732158fa982f85bca4a6ffd413">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/Gas-react-native-vector-icons-unspecified_f977f36c559e67d906fa02537fc15d5036e58540.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_dfaf662ff1c1e2deb3a530c490272927ed9e542e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_6a72ce6315f244ae3aa40ee14054c48e7e851512.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/zeroxys/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
         jumboMode="false"
         optimize="true"
@@ -117,15 +225,6 @@
         revision="23.0.1"
         sha1="8f615bca00639150c9eb6175d4b5471193f70794">
         <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_25a41669bb53f021582d0882471e32bfa2a532b7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_6a72ce6315f244ae3aa40ee14054c48e7e851512.jar" />
     </item>
     <item
         is-multidex="false"
@@ -147,30 +246,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/Gas/react-native-maps/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="dfb98646df167fd612426d54754b5eb9bbf3096b">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/Gas-react-native-maps-unspecified_0752e0dad9366d8498afa59831625195a6012265.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
         <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_e52902d462336ed5dbfd740fce91ba5e29012b98.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_7fe7e7f72d1f451d90744c84e89194fcdfcd3ce6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -189,15 +270,6 @@
         revision="23.0.1"
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
         <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_52fb76ce6eb53d90c24757e92315db6d8527103f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="24303e5ddb2c1210dd7e8db9dbab018f50313e48">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.50.3_b28e15f0f30e9fb4b0ef2c6119c71d312faa091a.jar" />
     </item>
     <item
         is-multidex="false"
@@ -237,15 +309,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.0.1_258ffa45061894f5d1fdb72c24c854d43a483177.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
@@ -255,48 +318,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_4ee3b74747a9ab2f460a9cb0359226fff693c337.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_f9042a6c3f1f6a416210ddbd672ad01c69175c95.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
         <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_93bbb8b487a3fc08491f64a551162ffc625bf47d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_52fb76ce6eb53d90c24757e92315db6d8527103f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_c4c6ea5ec838a8bc766735c81b95acbd86cc0c2d.jar" />
     </item>
     <item
         is-multidex="false"
@@ -315,15 +342,6 @@
         revision="23.0.3"
         sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
         <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_f9042a6c3f1f6a416210ddbd672ad01c69175c95.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_19acf5c4339e234219d61fba4cc5d13e895497d8.jar" />
     </item>
     <item
         is-multidex="false"
@@ -360,15 +378,6 @@
         revision="23.0.1"
         sha1="6975da39a7040257bd51d21a231b76c915872d38">
         <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_bd05b5e7f5ab0109df93568c3449ccc428b73b15.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
-        <dex dex="/home/zeroxys/Dev/Mobile/Gas/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.0.1_732f8bd59fee1a273c1e6d9f8e0ac0ffd019a110.jar" />
     </item>
     <item
         is-multidex="false"
