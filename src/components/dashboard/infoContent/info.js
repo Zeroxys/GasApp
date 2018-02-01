@@ -1,6 +1,8 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight, TouchableOpacity} from 'react-native'
 
+import Icon from 'react-native-vector-icons/Ionicons'
+
 const styles = StyleSheet.create({
   content : {
     width : '90%',
@@ -17,9 +19,9 @@ const Info = (props) => {
       style={styles.content}
       onPress={props.showOptions}>
       <View >
-        <Text>Icon</Text>
+        <Icon name="md-home"/>
         <Text>Destino</Text>
-        <Text>Icon</Text>
+        <Icon name="md-add"/>
       </View>
     </TouchableOpacity>
   )

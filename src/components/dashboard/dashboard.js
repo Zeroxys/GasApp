@@ -125,7 +125,7 @@ class Dashboard extends Component {
             showOptions = {e => this.showOptions(e)}/>
         </View>
       </View>
-
+      <Button title={"Aprobar"} onPress={this.getCurrentPosition}/>
     </View>
     )
   }
