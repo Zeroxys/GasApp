@@ -1,34 +1,19 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet, Dimensions, Button} from 'react-native'
+import {View, 
+  Text, 
+  StyleSheet, 
+  Dimensions, 
+  Button,
+  TouchableOpacity} from 'react-native'
 import MapView from 'react-native-maps'
+import Icon from 'react-native-vector-icons/Ionicons'
+import {Actions} from 'react-native-router-flux'
 
 import InfoContent from './infoContent/info'
+import PositionButton from './PositionButton'
+import GasPrice from './GasPrice'
 
 const {width, height} = Dimensions.get('window')
-
-const styles = StyleSheet.create({
-  content : {
-    flex : 1,
-    width: width,
-    height : height,
-    borderWidth : 4,
-    borderColor : 'red'
-  },
-
-  map : {
-    width : width,
-    height : height / 2
-  },
-  
-  infoContainers : {
-    flexDirection : 'column', 
-    justifyContent :'space-around',
-    alignItems: 'center',
-    height : 200,
-    borderWidth : 1,
-    borderColor : 'green'
-  }
-})
 
 class Dashboard extends Component {
 
@@ -100,35 +85,72 @@ class Dashboard extends Component {
     let marker = null
 
     if(this.state.marker) {
-      marker = <MapView.Marker coordinate={this.state.currentLocation}/>
+      marker = <MapView.Marker pinColor={'#2A56C6'} coordinate={this.state.currentLocation}/>
     }
 
-    return( 
+    return(
     <View style={styles.content}>
 
-      <View>
+      <View style={styles.mapContent}>
         <MapView 
-          style={styles.map} 
+          style={styles.map}
+          loadingIndicatorColor={'#2A56C6'}
+          loadingBackgroundColor={'#2A56C6'}
           initialRegion={this.state.currentLocation}
           onPress={this.locationHandler}
           ref = {ref => this.map = ref}>
           {marker}
         </MapView>
+        <GasPrice/>
+        <PositionButton getCurrentPosition={this.getCurrentPosition}/>
       </View>
 
-      <View>
-        <Button title={"Posicion actual"} onPress={this.getCurrentPosition}/>
-        <View style={styles.infoContainers}>
+      <View style={styles.infoContainers}>
+        <View>
           <InfoContent 
             showOptions = {e => this.showOptions(e)}/>
           <InfoContent
-            showOptions = {e => this.showOptions(e)}/>
+            showOptions = {e => this.showOptions(e)}/>          
         </View>
+        <Button
+            color = "#2A56C6"
+            title={"Aprobar"} 
+            onPress={Actions.ticket}/>
       </View>
-      <Button title={"Aprobar"} onPress={this.getCurrentPosition}/>
+
     </View>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  content : {
+    width: width,
+    height : height,
+    justifyContent : 'space-around',
+    alignItems : 'center'
+  },
+
+  mapContent : {
+    flex : 0,
+    height : '50%',
+    alignItems :'center',
+  },
+
+  infoContainers : {
+    width : width,
+    height : '50%',
+    flexDirection : 'column', 
+    justifyContent :'center',
+    alignItems: 'center',
+  },
+
+  map : {
+    position : 'absolute',
+    width : width,
+    height : height / 2
+  }
+
+})
 
 export default Dashboard
