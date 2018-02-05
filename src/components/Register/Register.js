@@ -1,7 +1,6 @@
 import React from 'react'
 import {View, Text, TextInput, StyleSheet, Button} from 'react-native'
 
-
 const styles = StyleSheet.create({
   content : {
     flex:1,
@@ -47,6 +46,9 @@ const Register = (props) => {
             <TextInput placeholder="Email"
               style={styles.inputheyitspriscilaheyitspriscilaheyitspriscilaheyitspriscila}/>
             <TextInput placeholder="Usuario"
+              style={styles.input}/>
+            <TextInput 
+              placeholder="Numero Telefono"
               style={styles.input}/>
             <TextInput 
               placeholder="Contraseña"

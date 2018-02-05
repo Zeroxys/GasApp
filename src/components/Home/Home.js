@@ -6,7 +6,6 @@ import Login from '../Login/Login'
 import Register from '../Register/Register'
 import Signup from '../Signup/Signup'
 import Dashboard from '../dashboard/dashboard'
-import Ticket from '../Ticket/Ticket'
 
 const styles = StyleSheet.create({
   bar : {
@@ -22,7 +21,6 @@ const Home =  () => {
         <Scene key="register" component={Register} titleStyle={styles.bar} title="REGISTRATE"/>
         <Scene key="signup" component={Signup} title="INGRESAR"/>
         <Scene key="dashboard" component={Dashboard} hideNavBar={true}/>
-        <Scene key="ticket" component={Ticket} title="CHECK"/>
       </Stack>
     </Router>
   )

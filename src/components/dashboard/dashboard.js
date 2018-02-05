@@ -7,11 +7,11 @@ import {View,
   TouchableOpacity} from 'react-native'
 import MapView from 'react-native-maps'
 import Icon from 'react-native-vector-icons/Ionicons'
-import {Actions} from 'react-native-router-flux'
 
 import InfoContent from './infoContent/info'
 import PositionButton from './PositionButton'
 import GasPrice from './GasPrice'
+import Ticket from '../Ticket/Ticket'
 
 const {width, height} = Dimensions.get('window')
 
@@ -26,12 +26,16 @@ class Dashboard extends Component {
         latitudeDelta : 0.0122,
         longitudeDelta : width / height * 0.0122
       },
-      marker : false
+      marker : false,
+
+      visible : false
     }
 
     this.locationHandler = this.locationHandler.bind(this)
     this.getCurrentPosition = this.getCurrentPosition.bind(this)
     this.showOptions = this.showOptions.bind(this)
+    this.closeModal = this.closeModal.bind(this)
+    this.OpenModal = this.OpenModal.bind(this)
   }
 
   showOptions = (e) => {
@@ -80,6 +84,25 @@ class Dashboard extends Component {
     console.warn(event.nativeEvent.coordinate)
   }
 
+  // Modal Methods
+
+  OpenModal = () => {
+    this.setState( prevState => {
+      return  {
+        visible : prevState.visible = true
+      }
+    })
+
+  }
+
+  closeModal = () => {
+    this.setState( prevState => {
+      return  {
+        visible : prevState.visible = false
+      }
+    })
+  }
+
   render () {
 
     let marker = null
@@ -90,6 +113,8 @@ class Dashboard extends Component {
 
     return(
     <View style={styles.content}>
+
+      <Ticket visible={this.state.visible} closeModal={this.closeModal}/>
 
       <View style={styles.mapContent}>
         <MapView 
@@ -115,7 +140,7 @@ class Dashboard extends Component {
         <Button
             color = "#2A56C6"
             title={"Aprobar"} 
-            onPress={Actions.ticket}/>
+            onPress={this.OpenModal}/>
       </View>
 
     </View>

@@ -1,50 +1,68 @@
 import React from 'react'
-import {View, StyleSheet, Text, TouchableOpacity} from 'react-native'
+import {View, StyleSheet, Text, TouchableOpacity, Modal} from 'react-native'
+import Icons from 'react-native-vector-icons/Ionicons'
 
-const Ticket = () => {
+const Ticket = (props) => {
 
   const purshase = () => {
     alert('Producto Comprado')
   }
 
   return (
-    <View style={styles.content}>
-      <View style={styles.information}>
-        <View>
-          <Text>Cliente:</Text>
-          <Text style={styles.bold}>Nombre del Cliente que pedio el servicio</Text>
+    <Modal 
+      onRequestClose={props.closeModal}
+      visible={props.visible}
+      animationType="fade"
+      transparent={true}>
+
+      <View style={styles.content}>
+
+        <View style={styles.information}>
+          <View>
+            <TouchableOpacity style={styles.buttonClose} onPress={props.closeModal}>
+              <Icons size={30} name="ios-close-circle-outline" color="#ffffff"/>
+            </TouchableOpacity>
+          </View>
+          <View>
+            <Text>Cliente:</Text>
+            <Text style={styles.bold}>Nombre del Cliente que pedio el servicio</Text>
+          </View>
+
+          <View>
+            <Text>Dirección:</Text>
+            <Text style={styles.bold}>Dirección donde se llevara el pedido</Text>
+          </View>
+
+          <View>
+            <Text>Kilos:</Text>
+            <Text style={styles.bold}>10 Kg</Text>
+          </View>
+
+          <View>
+            <Text>Cantidad:</Text>
+            <Text style={styles.bold}>$100.00</Text>
+          </View>
+
+          <View>
+            <Text>Telefono del despachador:</Text>
+            <Text style={styles.bold}>99 99 99 99 99</Text>
+          </View>
+
+          <View>
+            <Text>Nombre del despachador:</Text>
+            <Text style={styles.bold}>Nombre del despachador</Text>
+          </View>
+          
+          <View>
+            <TouchableOpacity style={styles.buttonPurchase}>
+              <Text style={{color : 'white', textAlign : 'center'}}><Icons size={15} name="ios-cart" color="#ffffff"/> Comprar</Text>
+            </TouchableOpacity>
+          </View>
+
         </View>
 
-        <View>
-          <Text>Dirección:</Text>
-          <Text style={styles.bold}>Dirección donde se llevara el pedido</Text>
-        </View>
-
-        <View>
-          <Text>Kilos:</Text>
-          <Text style={styles.bold}>10 Kg</Text>
-        </View>
-
-        <View>
-          <Text>Cantidad:</Text>
-          <Text style={styles.bold}>$100.00</Text>
-        </View>
-
-        <View>
-          <Text>Telefono del despachador:</Text>
-          <Text style={styles.bold}>99 99 99 99 99</Text>
-        </View>
-
-        <View>
-          <Text>Nombre del despachador:</Text>
-          <Text style={styles.bold}>Nombre del despachador</Text>
-        </View>
-        
       </View>
-      <TouchableOpacity style={styles.button}>
-        <Text style={{color : 'white', textAlign : 'center'}}>Comprar</Text>
-      </TouchableOpacity>
-    </View>
+    </Modal>
   )
 }
 
@@ -53,25 +71,39 @@ const styles = StyleSheet.create({
     flex : 1,
     flexDirection : 'column',
     justifyContent : 'space-around',
-    alignItems : 'center'
+    alignItems : 'center',
+    backgroundColor: 'rgba(52, 52, 52, 0.8)',
   },
+
   information : {
-    width : '80%',
-    height : '70%',
-    justifyContent : 'space-around'
+    width : '90%',
+    height : '80%',
+    justifyContent : 'space-around',
+    paddingLeft: 10,
+    backgroundColor : '#eee',
+    elevation : 10,
   },
 
   bold : {
     color : 'black'
   },
 
-  button : {
+  buttonPurchase : {
     backgroundColor : '#2A56C6',
     width : '40%',
     height : 40,
     justifyContent : 'center',
     alignItems : 'center',
-    elevation : 5,
+  },
+
+  buttonClose : {
+    borderRadius : 100,
+    backgroundColor : '#ef5350',
+    width : 50,
+    height : 50,
+    justifyContent : 'center',
+    alignItems : 'center',
+    elevation : 1,
   }
 
 })
