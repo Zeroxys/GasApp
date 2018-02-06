@@ -9,11 +9,11 @@ import {View,
 import MapView from 'react-native-maps'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-import InfoContent from './infoContent/info'
 import PositionButton from './PositionButton'
 import GasPrice from './GasPrice'
 import Ticket from '../Ticket/Ticket'
 import MapViewDirection from '../MapView/MapDirections'
+import InfoContent from '../dashboard/infoContent/InfoContent'
 
 const {width, height} = Dimensions.get('window')
 
@@ -120,7 +120,7 @@ class Dashboard extends Component {
     return(
     <View style={styles.content}>
 
-      <Ticket visible={this.state.visible} closeModal={this.closeModal}/>
+      {/*<Ticket visible={this.state.visible} closeModal={this.closeModal}/>*/}
 
       <View style={styles.mapContent}>
         <MapView 
@@ -139,18 +139,7 @@ class Dashboard extends Component {
         <PositionButton getCurrentPosition={this.getCurrentPosition}/>
       </View>
 
-      <View style={styles.infoContainers}>
-        <View>
-          <InfoContent 
-            showOptions = {e => this.showOptions(e)}/>
-          <InfoContent
-            showOptions = {e => this.showOptions(e)}/>          
-        </View>
-        <Button
-            color = "#2A56C6"
-            title={"Aprobar"} 
-            onPress={this.OpenModal}/>
-      </View>
+      <InfoContent/>
 
     </View>
     )

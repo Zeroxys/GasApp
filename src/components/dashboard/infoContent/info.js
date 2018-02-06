@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, TouchableHighlight, TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, TouchableHighlight, TouchableOpacity, Animated} from 'react-native'
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -10,9 +10,9 @@ const Info = (props) => {
       onPress={props.showOptions}>
       <View style={styles.container}>
         <View style={styles.iconContent}>
-          <Icon name="md-home" size={22} color="#ffffff"/>
+          <Icon name={props.iconName} size={22} color="#ffffff"/>
         </View>
-        <Text>Destino</Text>
+        <Text>{props.name}</Text>
         <Icon name="md-add" size={22}/>
       </View>
     </TouchableOpacity>

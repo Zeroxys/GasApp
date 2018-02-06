@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
     height : '80%',
     justifyContent : 'space-around',
     paddingLeft: 10,
+    borderRadius : 4,
     backgroundColor : '#eee',
     elevation : 10,
   },
