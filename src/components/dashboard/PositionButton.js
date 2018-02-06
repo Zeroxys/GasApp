@@ -16,8 +16,8 @@ const PositionButton = (props) => {
 
 const styles = StyleSheet.create({
   buttonContent : {
-    top : 230,
-    left : 160,
+    top : '60%',
+    left : '40%',
     backgroundColor: 'white',
     width : 50,
     height : 50,

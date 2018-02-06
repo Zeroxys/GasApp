@@ -2092,7 +2092,10 @@ containing a value of this type.
         public static final int common_google_signin_btn_text_light_focused=0x7f020050;
         public static final int common_google_signin_btn_text_light_normal=0x7f020051;
         public static final int common_google_signin_btn_text_light_pressed=0x7f020052;
-        public static final int notification_template_icon_bg=0x7f020053;
+        public static final int node_modules_reactnativerouterflux_images_back_chevron=0x7f020053;
+        public static final int node_modules_reactnativerouterflux_images_menu_burger=0x7f020054;
+        public static final int node_modules_reactnavigation_src_views_assets_backicon=0x7f020055;
+        public static final int notification_template_icon_bg=0x7f020056;
     }
     public static final class id {
         public static final int action0=0x7f0d0063;

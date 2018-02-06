@@ -12,17 +12,19 @@ const Ticket = (props) => {
     <Modal 
       onRequestClose={props.closeModal}
       visible={props.visible}
-      animationType="fade"
+      animationType="slide"
       transparent={true}>
 
       <View style={styles.content}>
 
         <View style={styles.information}>
+
           <View>
             <TouchableOpacity style={styles.buttonClose} onPress={props.closeModal}>
               <Icons size={30} name="ios-close-circle-outline" color="#ffffff"/>
             </TouchableOpacity>
           </View>
+
           <View>
             <Text>Cliente:</Text>
             <Text style={styles.bold}>Nombre del Cliente que pedio el servicio</Text>
