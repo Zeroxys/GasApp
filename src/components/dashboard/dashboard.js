@@ -5,6 +5,7 @@ import {View,
   Dimensions, 
   Button,
   TouchableOpacity} from 'react-native'
+
 import MapView from 'react-native-maps'
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -12,6 +13,7 @@ import InfoContent from './infoContent/info'
 import PositionButton from './PositionButton'
 import GasPrice from './GasPrice'
 import Ticket from '../Ticket/Ticket'
+import MapViewDirection from '../MapView/MapDirections'
 
 const {width, height} = Dimensions.get('window')
 
@@ -103,6 +105,10 @@ class Dashboard extends Component {
     })
   }
 
+  componentDidMount() {
+    this.getCurrentPosition()
+  }
+
   render () {
 
     let marker = null
@@ -125,6 +131,9 @@ class Dashboard extends Component {
           onPress={this.locationHandler}
           ref = {ref => this.map = ref}>
           {marker}
+
+          <MapViewDirection currentLocation={this.state.currentLocation}/>
+
         </MapView>
         <GasPrice/>
         <PositionButton getCurrentPosition={this.getCurrentPosition}/>
