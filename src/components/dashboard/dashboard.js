@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {View, 
+import {
+  View, 
   Text, 
   StyleSheet, 
   Dimensions, 
@@ -29,15 +30,16 @@ class Dashboard extends Component {
         longitudeDelta : width / height * 0.0122
       },
       marker : false,
-
-      visible : false
+      visible : false,
+      expand : true
     }
 
     this.locationHandler = this.locationHandler.bind(this)
     this.getCurrentPosition = this.getCurrentPosition.bind(this)
     this.showOptions = this.showOptions.bind(this)
     this.closeModal = this.closeModal.bind(this)
-    this.OpenModal = this.OpenModal.bind(this)
+    this.openModal = this.openModal.bind(this)
+    this.expandContent = this.expandContent.bind(this)
   }
 
   showOptions = (e) => {
@@ -58,7 +60,6 @@ class Dashboard extends Component {
       
       this.locationHandler(coordsEvent)
 
-      console.warn(pos.coords)
     }, error_handler => {
       if(error_handler) alert('get current position failed')
     })
@@ -83,12 +84,10 @@ class Dashboard extends Component {
         marker : true
       }
     })
-    console.warn(event.nativeEvent.coordinate)
   }
 
   // Modal Methods
-
-  OpenModal = () => {
+  openModal = () => {
     this.setState( prevState => {
       return  {
         visible : prevState.visible = true
@@ -105,6 +104,11 @@ class Dashboard extends Component {
     })
   }
 
+  expandContent = () => {
+    alert('expandiendo')
+  }
+
+  //LifeCycles Hooks
   componentDidMount() {
     this.getCurrentPosition()
   }
@@ -120,7 +124,7 @@ class Dashboard extends Component {
     return(
     <View style={styles.content}>
 
-      {/*<Ticket visible={this.state.visible} closeModal={this.closeModal}/>*/}
+      <Ticket visible={this.state.visible} closeModal={this.closeModal}/>
 
       <View style={styles.mapContent}>
         <MapView 
@@ -139,7 +143,10 @@ class Dashboard extends Component {
         <PositionButton getCurrentPosition={this.getCurrentPosition}/>
       </View>
 
-      <InfoContent/>
+      <InfoContent
+        expandContent = {this.expandContent}
+        openModal={this.openModal} 
+        showOptions={this.showOptions}/>
 
     </View>
     )
@@ -158,14 +165,6 @@ const styles = StyleSheet.create({
     flex : 0,
     height : '50%',
     alignItems :'center',
-  },
-
-  infoContainers : {
-    width : width,
-    height : '50%',
-    flexDirection : 'column', 
-    justifyContent :'center',
-    alignItems: 'center',
   },
 
   map : {
