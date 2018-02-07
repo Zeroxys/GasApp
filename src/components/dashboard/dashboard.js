@@ -31,7 +31,6 @@ class Dashboard extends Component {
       },
       marker : false,
       visible : false,
-      expand : true
     }
 
     this.locationHandler = this.locationHandler.bind(this)
@@ -39,7 +38,6 @@ class Dashboard extends Component {
     this.showOptions = this.showOptions.bind(this)
     this.closeModal = this.closeModal.bind(this)
     this.openModal = this.openModal.bind(this)
-    this.expandContent = this.expandContent.bind(this)
   }
 
   showOptions = (e) => {
@@ -104,10 +102,6 @@ class Dashboard extends Component {
     })
   }
 
-  expandContent = () => {
-    alert('expandiendo')
-  }
-
   //LifeCycles Hooks
   componentDidMount() {
     this.getCurrentPosition()
@@ -144,7 +138,6 @@ class Dashboard extends Component {
       </View>
 
       <InfoContent
-        expandContent = {this.expandContent}
         openModal={this.openModal} 
         showOptions={this.showOptions}/>
 
@@ -157,13 +150,13 @@ const styles = StyleSheet.create({
   content : {
     width: width,
     height : height,
-    justifyContent : 'space-around',
-    alignItems : 'center'
+    //justifyContent : 'space-around',
+    //alignItems : 'center'
   },
 
   mapContent : {
-    flex : 0,
-    height : '50%',
+    flex : 1,
+    //height : height / 2,
     alignItems :'center',
   },
 
@@ -172,7 +165,6 @@ const styles = StyleSheet.create({
     width : width,
     height : height / 2
   }
-
 })
 
 export default Dashboard

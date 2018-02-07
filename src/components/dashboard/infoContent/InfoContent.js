@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import {View,Text, StyleSheet, TouchableOpacity, Button, Dimensions, Animated} from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
+
 import Info from './info'
+import ExpandButton from './ExpandButton'
 
 const {width, height} = Dimensions.get('window')
 
@@ -18,40 +20,40 @@ class InfoContent extends Component {
 
     this.setMinHeight = this.setMinHeight.bind(this)
     this.setMaxHeight = this.setMaxHeight.bind(this)
-    this.toogle =  this.toogle.bind(this)
+    this.toggle =  this.toggle.bind(this)
   }
 
-  toogle = () => {
+  toggle = () => {
 
     let initialValue = null
     let finalValue = null
 
     this.setState( prevState => {
       return {
-        expanded :  !prevState.expanded,
+        expanded :  !prevState.expanded
       }
     })
 
     if(this.state.expanded) {
-      initialValue = 200
-    }else {
-      initialValue = height / 4 
+      initialValue = this.state.maxHeight + this.state.minHeight
+    } else {
+      initialValue = this.state.minHeight
     }
 
     if(!this.state.expanded) {
-      finalValue = 100
+      finalValue = this.state.maxHeight + this.state.minHeight
     } else {
-      finalValue = 150
+      finalValue = this.state.minHeight
     }
 
-    this.state.animation.setValue(initialValue)
-    Animated.spring(
-        this.state.animation,
-        {
-            toValue: finalValue
-        }
-    ).start();
+    console.log('Valor inicial ' + initialValue)
+    console.log('Valor Final ' + finalValue)
 
+    this.state.animation.setValue(initialValue)
+    Animated.spring( this.state.animation,{ toValue: finalValue }).start();
+    console.log(this.state.expanded)
+
+    console.log('valor de animacion ' + this.state.animation._value)
   }
 
   setMaxHeight = (e) => {
@@ -84,64 +86,66 @@ class InfoContent extends Component {
     }
 
     return (
-      <Animated.View style={[styles.infoContainers]}>
+      <View style={styles.infoContainers} onLayout={this.setMaxHeight}>
+        <ExpandButton arrowIcon={arrowIcon} toogle={() => this.toggle()}/>
 
-        <TouchableOpacity style={styles.expandButton} onPress={this.toogle}>
-          <Icon name={arrowIcon} size={25}/>
-        </TouchableOpacity>
+        <Animated.View style={[styles.content, {height : this.state.animation}]}>
+          
+          <View style={styles.generalContent} onLayout={this.setMinHeight}>
 
-        <View style={styles.content} onLayout={this.setMaxHeight}>
-          <View onLayout={this.setMinHeight}>
-            <Info
-              name="Kilos"
-              iconName="ios-flame"
-              showOptions = {e => this.props.showOptions(e)}/>
-
-            <Info
-              name="Cantidad"
-              iconName="md-flask"
-              showOptions = {e => this.props.showOptions(e)}/>
-                        
+            <View>
+              <Info
+                name="Kilos"
+                iconName="ios-flame"
+                showOptions = {e => this.props.showOptions(e)}/>
+    
+              <Info
+                name="Cantidad"
+                iconName="md-flask"
+                showOptions = {e => this.props.showOptions(e)}/>             
+            </View>
+            <TouchableOpacity
+                  style={styles.aprobar}
+                  title={"Aprobar"} 
+                  onPress={e => this.props.openModal()}>
+                  <Text style={{color : 'white'}}>APROBAR</Text>
+            </TouchableOpacity>      
           </View>
-          <TouchableOpacity
-                style={styles.aprobar}
-                title={"Aprobar"} 
-                onPress={e => this.props.openModal()}>
-                <Text style={{color : 'white'}}>APROBAR</Text>
-          </TouchableOpacity>      
-        </View>
-      
-    </Animated.View>
+
+        </Animated.View>
+      </View>  
     )
   }
 
 }
 
 const styles = StyleSheet.create({
+
   infoContainers : {
     borderWidth : 2,
+    borderColor : 'red',
     width : width,
-    height : height / 2,
-    flexDirection : 'column', 
-    justifyContent :'center',
     alignItems: 'center',
+    height : '50%'
   },
 
+  // must be expand : false or true
   content :{
     borderWidth : 2,
-    justifyContent: 'center',
+    borderColor : 'blue',
     alignItems : 'center',
-    width : '90%'
+    width : '100%',
+    height : '100%',
+    minHeight : '10%'
   },
 
-  expandButton : {
-    backgroundColor : '#eee',
-    elevation : 2,
+  //must be 0
+  generalContent : {
+    borderWidth : 2,
+    borderColor : 'green',
+    width : '90%',
     alignItems : 'center',
-    width : 30,
-    height : 30,
-    borderRadius : 100,
-    marginBottom : 25,
+    height : '50%'
   },
 
   aprobar : {
