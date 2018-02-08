@@ -1,6 +1,7 @@
 import React from 'react'
 import {View, Text, StyleSheet, TextInput, Button, TouchableOpacity} from 'react-native'
 import {Actions} from 'react-native-router-flux'
+import Icons from 'react-native-vector-icons/Ionicons'
 
 
 import Register from '../Register/Register'
@@ -24,6 +25,9 @@ const styles = {
 const Login = (props) => {
   return (
     <View style={styles.content}>
+
+      <Icons name="md-flame" size={180} color="#ff8a80"/>
+
       <View style={styles.container}>
         <TouchableOpacity>
           <Button

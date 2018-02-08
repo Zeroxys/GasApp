@@ -8,7 +8,7 @@ const GasPrice = () => {
 
   return (
     <TouchableOpacity style={styles.gasContent} onPress={info}>
-      <Text style={styles.gasFont}>Costo del dia:  $10 kg</Text>
+      <Text style={styles.gasFont}>Precio del gas LP al dia:  $10 kg</Text>
     </TouchableOpacity>
   )
 }

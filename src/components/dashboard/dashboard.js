@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {
+  Animated,
   View, 
   Text, 
   StyleSheet, 
@@ -23,22 +24,72 @@ class Dashboard extends Component {
   constructor () {
     super()
     this.state = {
+      expand : true,
+      minHeight : null,
+      maxHeight : null,
+
       currentLocation : {
         latitude : 17.989456,
         longitude : -92.947506,
         latitudeDelta : 0.0122,
         longitudeDelta : width / height * 0.0122
       },
+
       marker : false,
       visible : false,
+      animation : new Animated.Value()
     }
 
+    //Location and Modal binds
     this.locationHandler = this.locationHandler.bind(this)
     this.getCurrentPosition = this.getCurrentPosition.bind(this)
     this.showOptions = this.showOptions.bind(this)
     this.closeModal = this.closeModal.bind(this)
     this.openModal = this.openModal.bind(this)
+
+    //Animation Binds
+    this.setMaxHeight = this.setMaxHeight.bind(this)
+    this.setMinHeight = this.setMinHeight.bind(this)
+    this.toggle = this.toggle.bind(this)
   }
+
+  ////// Animation Functions ///////////
+
+  toggle = () => {
+
+    this.setState( prevState => {
+      return {
+        expand : !prevState.expand
+      }
+    })
+
+    let animateInitialValue = this.state.expand? this.state.maxHeight + this.state.minHeight : this.state.minHeight
+    let animateFinalValue = this.state.expand? this.state.minHeight : this.state.maxHeight + this.state.minHeight
+
+    this.state.animation.setValue(animateInitialValue)
+    Animated.spring(this.state.animation, { toValue: animateFinalValue}).start()
+  }
+
+  setMaxHeight = (e) => {
+    let height = e.nativeEvent.layout.height
+    this.setState( prevState => {
+      return  {
+        maxHeight : prevState.maxHeight = height
+      }
+    })
+  }
+
+  setMinHeight = (e) => {
+    let height = e.nativeEvent.layout.height
+    this.setState( prevState => {
+      return {
+        minHeight :  prevState.minHeight = height
+      }
+    })
+  }
+
+
+  /////////////////////////////////////
 
   showOptions = (e) => {
     alert(e)
@@ -120,7 +171,7 @@ class Dashboard extends Component {
 
       <Ticket visible={this.state.visible} closeModal={this.closeModal}/>
 
-      <View style={styles.mapContent}>
+      <Animated.View style={[styles.mapContent, {height : this.state.animation}]}>
         <MapView 
           style={styles.map}
           loadingIndicatorColor={'#2A56C6'}
@@ -135,11 +186,16 @@ class Dashboard extends Component {
         </MapView>
         <GasPrice/>
         <PositionButton getCurrentPosition={this.getCurrentPosition}/>
-      </View>
+      </Animated.View>
 
-      <InfoContent
-        openModal={this.openModal} 
-        showOptions={this.showOptions}/>
+      <View onLayout={this.setMinHeight}>
+        <InfoContent
+          setMaxHeight = {this.setMaxHeight}
+          toggle = {this.toggle}
+          expand = {this.state.expand}
+          openModal={this.openModal} 
+          showOptions={this.showOptions}/>
+      </View>
 
     </View>
     )
@@ -148,22 +204,20 @@ class Dashboard extends Component {
 
 const styles = StyleSheet.create({
   content : {
-    width: width,
-    height : height,
-    //justifyContent : 'space-around',
-    //alignItems : 'center'
+    width: '100%',
+    height : '100%',
   },
 
   mapContent : {
-    flex : 1,
-    //height : height / 2,
+    width : width,
     alignItems :'center',
+    //height : '94%'
   },
 
   map : {
     position : 'absolute',
     width : width,
-    height : height / 2
+    height : '100%'
   }
 })
 

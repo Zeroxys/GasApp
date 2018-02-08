@@ -15,7 +15,6 @@ class InfoContent extends Component {
       expanded : true,
       maxHeight : null,
       minHeight : null,
-      animation : new Animated.Value(),
     }
 
     this.setMinHeight = this.setMinHeight.bind(this)
@@ -79,17 +78,17 @@ class InfoContent extends Component {
   render () {
     let arrowIcon = null
 
-    if(this.state.expanded) {
+    if(this.props.expand) {
       arrowIcon = "ios-arrow-down"
     } else {
       arrowIcon = "ios-arrow-up"
     }
 
     return (
-      <View style={styles.infoContainers} onLayout={this.setMaxHeight}>
-        <ExpandButton arrowIcon={arrowIcon} toogle={() => this.toggle()}/>
+      <View style={[styles.infoContainers]} onLayout={(e) => this.props.setMaxHeight(e)}>
+        <ExpandButton arrowIcon={arrowIcon} toogle={() => this.props.toggle()}/>
 
-        <Animated.View style={[styles.content, {height : this.state.animation}]}>
+        <View style={[styles.content]}>
           
           <View style={styles.generalContent} onLayout={this.setMinHeight}>
 
@@ -112,7 +111,7 @@ class InfoContent extends Component {
             </TouchableOpacity>      
           </View>
 
-        </Animated.View>
+        </View>
       </View>  
     )
   }
