@@ -1,6 +1,5 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight, TouchableOpacity, Animated} from 'react-native'
-
 import Icon from 'react-native-vector-icons/Ionicons'
 
 const Info = (props) => {

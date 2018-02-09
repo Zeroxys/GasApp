@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 const ExpandButton = (props) => {
   return (
     <TouchableOpacity style={styles.expandButton} onPress={props.toogle}>
-      <Icon name={props.arrowIcon} size={25}/>
+      <Icon name={props.arrowIcon} size={25} style={{top : 5}}/>
     </TouchableOpacity>
   )
 }

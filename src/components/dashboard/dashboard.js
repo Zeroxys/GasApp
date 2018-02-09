@@ -10,6 +10,7 @@ import {
 
 import MapView from 'react-native-maps'
 import Icon from 'react-native-vector-icons/Ionicons'
+import Collapsible from 'react-native-collapsible'
 
 import PositionButton from './PositionButton'
 import GasPrice from './GasPrice'
@@ -24,10 +25,6 @@ class Dashboard extends Component {
   constructor () {
     super()
     this.state = {
-      expand : true,
-      minHeight : null,
-      maxHeight : null,
-
       currentLocation : {
         latitude : 17.989456,
         longitude : -92.947506,
@@ -35,6 +32,7 @@ class Dashboard extends Component {
         longitudeDelta : width / height * 0.0122
       },
 
+      expand : true,
       marker : false,
       visible : false,
       animation : new Animated.Value()
@@ -47,49 +45,17 @@ class Dashboard extends Component {
     this.closeModal = this.closeModal.bind(this)
     this.openModal = this.openModal.bind(this)
 
-    //Animation Binds
-    this.setMaxHeight = this.setMaxHeight.bind(this)
-    this.setMinHeight = this.setMinHeight.bind(this)
+    //Set the toggle function
     this.toggle = this.toggle.bind(this)
   }
 
-  ////// Animation Functions ///////////
-
   toggle = () => {
-
     this.setState( prevState => {
       return {
         expand : !prevState.expand
       }
     })
-
-    let animateInitialValue = this.state.expand? this.state.maxHeight + this.state.minHeight : this.state.minHeight
-    let animateFinalValue = this.state.expand? this.state.minHeight : this.state.maxHeight + this.state.minHeight
-
-    this.state.animation.setValue(animateInitialValue)
-    Animated.spring(this.state.animation, { toValue: animateFinalValue}).start()
   }
-
-  setMaxHeight = (e) => {
-    let height = e.nativeEvent.layout.height
-    this.setState( prevState => {
-      return  {
-        maxHeight : prevState.maxHeight = height
-      }
-    })
-  }
-
-  setMinHeight = (e) => {
-    let height = e.nativeEvent.layout.height
-    this.setState( prevState => {
-      return {
-        minHeight :  prevState.minHeight = height
-      }
-    })
-  }
-
-
-  /////////////////////////////////////
 
   showOptions = (e) => {
     alert(e)
@@ -170,8 +136,8 @@ class Dashboard extends Component {
     <View style={styles.content}>
 
       <Ticket visible={this.state.visible} closeModal={this.closeModal}/>
-
-      <Animated.View style={[styles.mapContent, {height : this.state.animation}]}>
+      
+      <View style={styles.mapContent}>
         <MapView 
           style={styles.map}
           loadingIndicatorColor={'#2A56C6'}
@@ -186,16 +152,13 @@ class Dashboard extends Component {
         </MapView>
         <GasPrice/>
         <PositionButton getCurrentPosition={this.getCurrentPosition}/>
-      </Animated.View>
-
-      <View onLayout={this.setMinHeight}>
-        <InfoContent
-          setMaxHeight = {this.setMaxHeight}
-          toggle = {this.toggle}
-          expand = {this.state.expand}
-          openModal={this.openModal} 
-          showOptions={this.showOptions}/>
       </View>
+
+      <InfoContent
+        toggle = {this.toggle}
+        expand = {this.state.expand}
+        openModal={this.openModal} 
+        showOptions={this.showOptions}/>
 
     </View>
     )
@@ -204,19 +167,21 @@ class Dashboard extends Component {
 
 const styles = StyleSheet.create({
   content : {
+    borderWidth : 3,
+    borderColor : 'yellow',
     width: '100%',
-    height : '100%',
+    height : '100%'
   },
 
   mapContent : {
-    width : width,
+    width : '100%',
     alignItems :'center',
-    //height : '94%'
+    height : '50%'
   },
 
   map : {
     position : 'absolute',
-    width : width,
+    width : '100%',
     height : '100%'
   }
 })
