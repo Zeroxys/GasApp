@@ -177,7 +177,6 @@ class Dashboard extends Component {
     )
   }
 }
-
 const styles = StyleSheet.create({
   content : {
     flex : 0,

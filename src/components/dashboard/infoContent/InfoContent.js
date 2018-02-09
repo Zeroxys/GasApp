@@ -35,12 +35,14 @@ class InfoContent extends Component {
               <Info
                 name="Kilos"
                 iconName="ios-flame"
-                showOptions = {e => this.props.showOptions(e)}/>
+                showOptions = {e => this.props.showOptions(e)}
+                messageInput="Introduce los Kilos"/>
     
               <Info
                 name="Cantidad"
                 iconName="md-flask"
-                showOptions = {e => this.props.showOptions(e)}/>             
+                showOptions = {e => this.props.showOptions(e)}
+                messageInput="Introduce el Monto"/>             
             </View>
             <TouchableOpacity
                   style={styles.aprobar}
@@ -76,8 +78,8 @@ const styles = StyleSheet.create({
   generalContent : {
     borderWidth : 2,
     borderColor : 'green',
-    width : '90%',
-    height : '60%',
+    width : '100%',
+    height : '100%',
     justifyContent : 'center',
     alignItems : 'center',
   },
