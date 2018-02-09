@@ -29,25 +29,27 @@ class InfoContent extends Component {
 
     return (
       <View style={styles.infoContainers}>
-        <View style={styles.generalContent}>
-          <View>
-            <Info
-              name="Kilos"
-              iconName="ios-flame"
-              showOptions = {e => this.props.showOptions(e)}/>
-  
-            <Info
-              name="Cantidad"
-              iconName="md-flask"
-              showOptions = {e => this.props.showOptions(e)}/>             
+        <Collapsible easing={"easeIn"} collapsed={this.props.expand} duration={500} align={"bottom"} style={styles.collapsible}>
+          <View style={styles.generalContent}>
+            <View>
+              <Info
+                name="Kilos"
+                iconName="ios-flame"
+                showOptions = {e => this.props.showOptions(e)}/>
+    
+              <Info
+                name="Cantidad"
+                iconName="md-flask"
+                showOptions = {e => this.props.showOptions(e)}/>             
+            </View>
+            <TouchableOpacity
+                  style={styles.aprobar}
+                  title={"Aprobar"} 
+                  onPress={e => this.props.openModal()}>
+                  <Text style={{color : 'white'}}>APROBAR</Text>
+            </TouchableOpacity> 
           </View>
-          <TouchableOpacity
-                style={styles.aprobar}
-                title={"Aprobar"} 
-                onPress={e => this.props.openModal()}>
-                <Text style={{color : 'white'}}>APROBAR</Text>
-          </TouchableOpacity>      
-        </View>
+        </Collapsible>      
       </View>
     )
   }
@@ -60,9 +62,15 @@ const styles = StyleSheet.create({
     width : '100%',
     borderWidth : 2,
     borderColor : 'red',
-    width : width,
+    alignItems : 'center',
+  },
+
+  collapsible : {
+    width : '100%',
+    borderWidth : 2,
     justifyContent : 'center',
-    alignItems : 'center'
+    alignItems : 'center',
+    height: 200
   },
 
   generalContent : {
@@ -80,7 +88,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems : 'center',
     backgroundColor : "#2A56C6",
-    height : '15%'
+    height : 30
   }
 })
 

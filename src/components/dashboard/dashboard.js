@@ -17,6 +17,7 @@ import GasPrice from './GasPrice'
 import Ticket from '../Ticket/Ticket'
 import MapViewDirection from '../MapView/MapDirections'
 import InfoContent from '../dashboard/infoContent/InfoContent'
+import ExpandButton from '../dashboard/infoContent/ExpandButton'
 
 const {width, height} = Dimensions.get('window')
 
@@ -128,6 +129,14 @@ class Dashboard extends Component {
 
     let marker = null
 
+    let arrowIcon = null
+
+    if(this.state.expand) {
+      arrowIcon = "ios-arrow-up"
+    } else {
+      arrowIcon = "ios-arrow-down"
+    }
+
     if(this.state.marker) {
       marker = <MapView.Marker pinColor={'#2A56C6'} coordinate={this.state.currentLocation}/>
     }
@@ -150,9 +159,13 @@ class Dashboard extends Component {
           <MapViewDirection currentLocation={this.state.currentLocation}/>
 
         </MapView>
+        <ExpandButton
+          toggle={() => this.toggle()}
+          arrowIcon={arrowIcon}/>
         <GasPrice/>
         <PositionButton getCurrentPosition={this.getCurrentPosition}/>
       </View>
+      
 
       <InfoContent
         toggle = {this.toggle}
@@ -167,16 +180,22 @@ class Dashboard extends Component {
 
 const styles = StyleSheet.create({
   content : {
+    flex : 0,
     borderWidth : 3,
     borderColor : 'yellow',
     width: '100%',
-    height : '100%'
+    height : '100%',
+    justifyContent : 'flex-end',
+    alignItems : 'center'
   },
 
   mapContent : {
+    borderWidth : 2,
+    borderColor: 'green',
     width : '100%',
+    minHeight : '100%',
+    maxHeight : '100%',
     alignItems :'center',
-    height : '50%'
   },
 
   map : {
