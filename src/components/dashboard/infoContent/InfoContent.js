@@ -62,22 +62,20 @@ const styles = StyleSheet.create({
 
   infoContainers : {
     width : '100%',
-    borderWidth : 2,
-    borderColor : 'red',
     alignItems : 'center',
   },
 
   collapsible : {
     width : '100%',
-    borderWidth : 2,
+    //borderWidth : 2,
     justifyContent : 'center',
     alignItems : 'center',
     height: 200
   },
 
   generalContent : {
-    borderWidth : 2,
-    borderColor : 'green',
+    //borderWidth : 2,
+    //borderColor : 'green',
     width : '100%',
     height : '100%',
     justifyContent : 'center',
@@ -85,8 +83,9 @@ const styles = StyleSheet.create({
   },
 
   aprobar : {
+    top:5,
     elevation : 2,
-    width : '70%',
+    width : 300,
     justifyContent:'center',
     alignItems : 'center',
     backgroundColor : "#2A56C6",

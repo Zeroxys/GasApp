@@ -179,9 +179,7 @@ class Dashboard extends Component {
 }
 const styles = StyleSheet.create({
   content : {
-    flex : 0,
-    borderWidth : 3,
-    borderColor : 'yellow',
+    flex : 1,
     width: '100%',
     height : '100%',
     justifyContent : 'flex-end',
@@ -189,8 +187,6 @@ const styles = StyleSheet.create({
   },
 
   mapContent : {
-    borderWidth : 2,
-    borderColor: 'green',
     width : '100%',
     minHeight : '100%',
     maxHeight : '100%',

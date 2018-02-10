@@ -22,7 +22,7 @@ const Info = (props) => {
 
         </View>
         
-        <Collapsible style={styles.collapsible} collapsed={false}>
+        <Collapsible style={styles.collapsible} collapsed={true}>
           <TextInput underlineColorAndroid={"white"} style={styles.input} placeholder={props.messageInput}/>
         </Collapsible>
       </View>
@@ -34,7 +34,6 @@ const Info = (props) => {
 const styles = StyleSheet.create({
 
   collapsible : {
-    borderRadius : 2,
     justifyContent : 'center',
     alignItems : 'center'
   },
@@ -48,15 +47,15 @@ const styles = StyleSheet.create({
 
   generalContent : {
     width : '100%',
-    borderWidth : 2,
-    height : 80,
+    //borderWidth : 2,
+    height : 50,
   },
 
   content : {
     width : '90%',
-    height : 80,
+    height : 50,
     flexDirection:'row',
-    margin: 10,
+    margin: 5,
     flexDirection: 'row',
     justifyContent : 'space-between',
     backgroundColor : "#A5B7BD",
